@@ -46,9 +46,9 @@ for i in range(1,6568):
 
 input("Press enter to continue")
 
-for frame in frames:
-        a=time.time()
-        print(frame)
+a=time.time()
+for i in range(0,6567):
+        print(frames[i])
         b=time.time()-a
-        #change 1/15 to 1/30 for playback at 1x instead of 2x speed
-        time.sleep(1/15-b)
+        if b<(i+1)/30:
+            time.sleep((i+1)/30-b)
